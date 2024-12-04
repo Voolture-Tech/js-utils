@@ -1,5 +1,5 @@
 {
-  "name": "js-utils",
+  "name": "@drm/js-utils",
   "version": "0.0.23",
   "description": "A collection of useful JavaScript and Typescript utilities",
   "private": false,
