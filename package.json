@@ -1,7 +1,7 @@
 {
   "name": "@devdiegomartins/js-utils",
   "version": "0.0.1",
-  "description": "A collection of useful JavaScript utilities",
+  "description": "A collection of useful JavaScript and Typescript utilities",
   "private": false,
   "author": {
     "name": "Diego Martins",
