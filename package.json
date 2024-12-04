@@ -7,15 +7,22 @@
     "name": "Diego Martins",
     "email": "diegoribeiromartins@gmail.com"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./types": "./dist/types/index.d.ts"
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "clean": "npx rimraf -g node_modules dist bun.lockb package-lock.json yarn.lock *.log",
-    "build": "tsup src/index.ts --format cjs,esm --dts --minify",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "test": "ts-jest",
     "test:watch": "ts-jest --watch",
     "test:coverage": "ts-jest --coverage",
