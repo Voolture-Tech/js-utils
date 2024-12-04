@@ -1,6 +1,6 @@
 {
   "name": "@devdiegomartins/js-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of useful JavaScript and Typescript utilities",
   "private": false,
   "author": {
@@ -15,9 +15,9 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --minify",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "ts-jest",
+    "test:watch": "ts-jest --watch",
+    "test:coverage": "ts-jest --coverage",
     "prepublishOnly": "npm run build",
     "prepare": "husky"
   },
@@ -25,8 +25,11 @@
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "latest",
     "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "tsup": "latest",
     "typescript": "^5.0.0"
   },
