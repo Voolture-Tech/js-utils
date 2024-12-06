@@ -2,7 +2,7 @@
   "name": "@voolture-tech/js-utils",
   "version": "0.0.1",
   "description": "A collection of useful JavaScript and Typescript utilities",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "author": {
     "name": "Diego Martins",
