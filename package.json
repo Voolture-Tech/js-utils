@@ -1,6 +1,6 @@
 {
   "name": "@voolture-tech/js-utils",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "A collection of useful JavaScript and Typescript utilities",
   "private": false,
   "license": "MIT",
@@ -24,12 +24,16 @@
       "import": "./dist/helpers/index.js",
       "require": "./dist/helpers/index.cjs"
     },
+    "./regexp": {
+      "import": "./dist/regexp/index.js",
+      "require": "./dist/regexp/index.cjs"
+    },
     "./types": "./dist/types/index.d.ts"
   },
   "files": ["dist"],
   "scripts": {
     "clean": "npx rimraf -g node_modules dist bun.lockb package-lock.json yarn.lock *.log",
-    "build": "tsup src/index.ts src/helpers/index.ts --format cjs,esm --dts --clean",
+    "build": "tsup src/index.ts src/helpers/index.ts src/regexp/index.ts --format cjs,esm --dts --clean",
     "prepublishOnly": "npm run build",
     "prepare": "husky",
     "test": "mocha --config mocha.config.cjs"
@@ -54,5 +58,18 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": ["javascript", "typescript", "utils", "helpers"]
+  "keywords": [
+    "javascript",
+    "typescript",
+    "utils",
+    "helpers",
+    "javascript-utils",
+    "typescript-utils",
+    "js-utils",
+    "ts-utils",
+    "voolture",
+    "voolture-tech",
+    "voolture-tech-js-utils",
+    "regexp"
+  ]
 }
