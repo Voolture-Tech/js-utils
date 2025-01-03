@@ -7,6 +7,12 @@ type IPasswordEncryptOptions = {
   digest?: string
 }
 
+/**
+ * Encrypts a password using PBKDF2
+ * @param password - The password to encrypt
+ * @param options - The options to use
+ * @returns The encrypted password
+ */
 async function passwordEncrypt(
   password: string,
   options: IPasswordEncryptOptions,

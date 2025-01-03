@@ -1,5 +1,11 @@
 import crypto from 'node:crypto'
 
+/**
+ * Compare a password with an encrypted password
+ * @param password - The password to compare
+ * @param encryptedPassword - The encrypted password to compare
+ * @returns A promise that resolves to a boolean indicating if the password is correct
+ */
 async function passwordCompare(
   password: string,
   encryptedPassword: string,

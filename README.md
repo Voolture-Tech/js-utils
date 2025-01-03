@@ -1,65 +1,68 @@
 <p align="right">
-  <a href="https://www.npmjs.com/package/@voolture-tech/js-utils"><img src="https://img.shields.io/npm/v/@voolture-tech/js-utils" alt="Versão mais recente em NPM" /></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/devdiegomartins/js-utils/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="JS-Utils é uma biblioteca distribuida com a licença MIT" /></a>
+  <a href="https://www.npmjs.com/package/@voolture-tech/js-utils"><img src="https://img.shields.io/npm/v/@voolture-tech/js-utils" alt="Latest version on NPM" /></a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://github.com/devdiegomartins/js-utils/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="JS-Utils is a library distributed under the MIT license" /></a>
 </p>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
 <h1 align="center">JS Utils</h1>
-<h3 align="center">Uma biblioteca de conteúdos reutilizáveis e de fácil acesso</h3>
+<h3 align="center">A library of reusable and easily accessible content</h3>
+<h5 align="center">powered by Voolture Tech Community</h5>
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-### ***Resumo, objetivos e inspirações***
-<strong>JS Utils</strong> foi criado pensando no "re-uso" constante de códigos e suas recriações em projetos distintos. Por conta dessa necessidade de recriar os recursos em multiplos projetos, foi pensado na criação dessa biblioteca para comportar esses recursos em um único (e pequeno) lugar.
+### **Summary, Objectives, and Inspirations**
+<strong>JS Utils</strong> was created with the idea of constant "reuse" of code and its recreations in different projects. Due to the need to recreate resources in multiple projects, this library was created to house these resources in one (and small) place.
 
 <p>&nbsp;</p>
 
-> **ATENÇÃO**: Esta é uma biblioteca em desenvolvimento, até o momento não recomendo o uso pois poderá haver mudanças mais à frente. Não nos responsabilizamos por possíveis problemas que aqui serão modificados
+> **ATTENTION**: This library is under development, at the moment we do not recommend its use as there may be changes in the future. We are not responsible for any issues that may be modified here.
+
 
 <p>&nbsp;</p>
 
-## Sumário
+## Table of Contents
 
-- [Instalando a biblioteca](#instalando-a-biblioteca)
-- [Padrões de uso da biblioteca](#padrões-de-uso-da-biblioteca)
-  - [Usando um RegExp](#usando-um-regexp)
-  - [Usando um Auxiliador (Helper)](#usando-um-auxiliador-helper)
-  - [Usando um Utiliário (util)](#usando-um-utiliário-util)
-- [Recursos de RegExp](#recursos-regexp)
-- [Recursos auxiliadores](#recursos-auxiliadores-helpers)
-- [Recursos utilitários](#recursos-utilitários-utils)
-- [Suporte](#suporte)
-- [Patrocinadores](#patrocinadores)
-- [Mantenedores](#mantenedores)
-- [Licença de uso](#licença-de-uso)
+- [Installing the library](#installing-the-library)
+- [Library usage patterns](#library-usage-patterns)
+  - [Using a RegExp](#using-a-regexp)
+  - [Using a Helper](#using-a-helper)
+  - [Using a Utility](#using-a-utility)
+- [RegExp Resources](#regexp-resources)
+- [Helper Resources](#helper-resources)
+- [Utility Resources](#utility-resources)
+- [Support](#support)
+- [Sponsors](#sponsors)
+- [Maintainers](#maintainers)
+- [License](#license)
 
 <p>&nbsp;</p>
 
-## Instalando a biblioteca
+## Installing the library
 
-Instalando usando o [`npm`](https://www.npmjs.com/package/voolture-tech/js-utils):
+Install using [`npm`](https://www.npmjs.com/package/voolture-tech/js-utils):
 
 ```bash
 npm i @voolture-tech/js-utils
 ```
+This package includes types of its resources
+
 <p>&nbsp;</p>
 
-## Padrões de uso da biblioteca
+## Library usage patterns
 
-O foco desta biblioteca é facilitar o seu uso e consumo, portanto todos os seus recursos são de fácil acesso. Sempre que pensar em um novo [recurso](#recursos-regexp) verifique se o mesmo já está contido na biblioteca, caso não esteja solicite-nos criando um novo issue. Sua participação é muito importante para a evolução desse projeto.
+The focus of this library is to facilitate its use and consumption, so all its resources are easily accessible. Whenever you think of a new [resource](#regexp-resources), check if it is already included in the library. If it is not, please request it by creating a new issue. Your participation is very important for the evolution of this project.
 
-Sem mais delongas, vamos usar um exemplo de um recurso axiliador (helper) e um recurso utilitário (util) para que veja seu funcionamento.
+Without further ado, let's use an example of a helper resource and a utility resource to see how they work.
 
-### **Usando um RegExp**
+### **Using a RegExp**
+Some very common RegExp are used quite frequently, so we have added some available in JavaScript for reuse.
 
-Alguns RegExp muito comuns são utilizados com uma certa constância, portanto adicionamos alguns disponíveis em Javascript para serem reaproveitados.
-
-Portanto, o mesmo possui um modo próprio de uso que são destacados por `@voolture-tech/js-utils/regexp` seguindo o exemplo abaixo
+Therefore, they have their own usage mode highlighted by `@voolture-tech/js-utils/regexp` following the example below:
 
 ```javascript
 import { email__regexp } from "@voolture-tech/js-utils/regexp"
@@ -67,90 +70,92 @@ import { email__regexp } from "@voolture-tech/js-utils/regexp"
 email__regexp.test("email@provider.com") 
 ```
 
-O Exemplo acima retornará `true`. Veja mais em [`RegExp`](./src/regexp/README.md)
+The example above will return `true`. See more in [`RegExp`](./src/regexp/README.md)
 
-### **Usando um Auxiliador (helper)**
+### **Using a Helper**
 
-Os auxiliadores possuem seu modo de utilizacão próprio que são destacados por `@voolture-tech/js-uitls/helpers` seguindo o exemplo abaixo
+Helpers have their own usage mode highlighted by `@voolture-tech/js-utils/helpers` following the example below:
 
 ```javascript
 import { secondsToMs } from "@voolture-tech/js-utils/helpers"
 
-const seconds = 3 // Escolhido 3 segundos para esse exemplo
+const seconds = 3 // Chosen 3 seconds for this example
 console.log(secondsToMs(seconds))
 ```
 
-O exemplo acima retornará `3000` que será do tipo Number. Veja mais em [`secondsToMs`](./src/helpers/time/README.md).
+The example above will return `3000`, which will be of type Number. See more in [`secondsToMs`](./src/helpers/time/README.md).
 
-### **Usando um Utiliário (util)**
+### **Using a Utility**
 
-Os utilitários (utils) são funcões mais objetivas e inveligentes, que são requisitadas diretamente pela raiz da biblioteca `@voolture-tech`, veja o exemplo abaixo:
+Utilities (utils) are more objective and intelligent functions, which are requested directly from the root of the `@voolture-tech` library. See the example below:
 
 ```javascript
 import { delay } from "@voolture-tech/js-utils"
 
 const start = Date.now()
-console.log(`iniciado em ${start}`)
+console.log(`started at ${start}`)
 
-const seconds = 4 // Foi escolhido 4 segundos de espera
+const seconds = 4 // Chosen 4 seconds of wait time
 delay(seconds).then(() => {
   const end = Date.now()
-  console.log(`finalizado em ${end}. Tempo de espera de ${end - start}`)
+  console.log(`finished at ${end}. Wait time of ${end - start}`)
 })
-
 ```
 
-O exemplo acima aguardará o tempo de 4 segundos para exercer o log dos tempos de início e fim do comando. Saiba mais sobre o [`delay`](./src/utils/delay/README.md).
+The example above will wait for 4 seconds before logging the start and end times. Learn more about [`delay`](./src/utils/delay/README.md).
 
 
->_ Os recursos utiliários (utils), em sua grande maioria, consomem recursos auxiliadores (helpers) internamente ao funcionamento da biblioteca, mas nunca o contrário. _
+> Utility resources (utils), for the most part, consume helper resources (helpers) internally for the library's functionality, but never the other way around.
 
 <p>&nbsp;</p>
 
->_ Os recursos utilitários (utils) e auxiliadores (helpers) consomem internamente os recursos RegExp ao funcionamento da biblioteca, mas nunca o contrário _ 
+> Utility (utils) and helper (helpers) resources internally consume RegExp resources for the library's functionality, but never the other way around.
 
 <p>&nbsp;</p><p>&nbsp;</p>
 
-### **Recursos RegExp**
+### **RegExp Resources**
 
-Veja a documentação e lista de RegExp disponíveis [clicando aqui](./src/regexp/README.md).
+Many applications commonly use standard RegExp patterns, so we have gathered many of them in one place to facilitate their use.
+See the documentation and list of available RegExp by [clicking here](./REGEXP_LIST.md).
 
 <p>&nbsp;</p>
 
-### **Recursos auxiliadores (helpers)**
+### **Helper Resources**
 
-| Recurso                                            | Objetivo                                       | Entrada           | Saída  |
+| Resource                                           | Objective                                      | Input             | Output |
 | -------------------------------------------------- | ---------------------------------------------- | ----------------- | ------ |
-| [`msToSeconds`](./src/helpers/time/README.md)      | Converter milessegundos para segundos          | (ms: Number)      | Number | 
-| [`secondsToMs`](./src/helpers/time/README.md)      | Converter segundos para milessegundos          | (seconds: Number) | Number | 
+| [`msToSeconds`](./src/helpers/time/README.md)      | Convert milliseconds to seconds                | (ms: Number)      | Number | 
+| [`secondsToMs`](./src/helpers/time/README.md)      | Convert seconds to milliseconds                | (seconds: Number) | Number | 
 
+To see more helper items, visit the [list of helper items](./HELPERS_LIST.md)
 
 <p>&nbsp;</p>
 
-### **Recursos utilitários (utils)**
+### **Utility Resources**
 
-| Recurso                                            | Objetivo                                       | Entrada           | Saída         |
-| -------------------------------------------------- | ---------------------------------------------- | ------------------------------------ | ------------------- |
-| [`delay`](./src/utils/delay/README.md)             | Aguardar um determinado tempo para continuar   | (seconds: Number)                    | Promise void        | 
-| [`getFileSizeByBytes`](./src/utils/getFileSizeByBytes/README.md)       | converte bytes para uma string legível      | (bytes: number) | string |
-| [`switcher`](./src/utils/switcher/README.md)       | Seleciona uma opção a partir de uma lista      | (list: object, selected: keyof list) | list item (unknown) |
+| Resource                                           | Objective                                       | Input             | Output         |
+| -------------------------------------------------- | ---------------------------------------------- | ----------------- | -------------- |
+| [`delay`](./src/utils/delay/README.md)             | Wait for a specified time before continuing     | (seconds: Number) | Promise void   | 
+| [`getFileSizeByBytes`](./src/utils/getFileSizeByBytes/README.md) | Convert bytes to a readable string              | (bytes: Number)   | String         |
+| [`switcher`](./src/utils/switcher/README.md)       | Select an option from a list                    | (list: Object, selected: keyof list) | List item (unknown) |
 
+To see more utility items, visit the [list of utility items](./UTILS_LIST.md)
 
 <p>&nbsp;</p><p>&nbsp;</p>
 
-## **Suporte**
+## **Support**
 
-Esta biblioteca no momento está em fase de desenvolvimento, algumas correções, melhorias e novos recursos serão implementados até a versão 1.0.
-Para quaisquer eventuais problemas com os recursos ou compatibilidade aqui encontrado, crie uma `issue` que responderei para a solução/solicitação da mesma.
+This library is currently under development, and some fixes, improvements, and new features will be implemented until version 1.0.
+For any issues with the resources or compatibility found here, please create an `issue`, and I will respond to resolve/request it.
 
-## **Patrocinadores**
+## **Sponsors**
 
-Em breve teremos algumas formas disponíveis para você nos ajudar a manter esse projeto
+Soon we will have some ways available for you to help us maintain this project.
 
-## **Mantenedores**
+## **Maintainers**
 
-Esse projeto existe somente pelas pessoas que para aqui [contribuem](CONTRIBUTING.md).
+This project exists only because of the people who [contribute](CONTRIBUTING.md) to it.
 
-### **Licença de uso**
+### **License**
 
-js-utils utiliza a licença [MIT](./LICENSE).
+js-utils uses the [MIT](./LICENSE) license.
