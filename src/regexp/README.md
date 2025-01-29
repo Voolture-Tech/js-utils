@@ -43,9 +43,8 @@
 | `htmlTag__regexp`    | Testa se uma string é uma tag HTML válida         |
 | `base64__regexp`     | Testa se uma string é um base64 válido            |
 | `hexColors__regexp`  | Testa se uma string é uma cor Hexadecimal válida  |
-| `hexColors__regexp`  | Testa se uma string é uma cor Hexadecimal válida  |
 | `rgbColors__regexp`  | Testa se uma string é uma cor RGB válida          |
-| `rgbColors__regexp`  | Testa se uma string é uma cor HSL válida          |
+| `hslColors__regexp`  | Testa se uma string é uma cor HSL válida          |
 
 <p>&nbsp;</p><p>&nbsp;</p>
 
@@ -72,7 +71,6 @@
 | `username__regexp` | Testa se é um nome de usuário válido |
 | `socialNetwortUsername__regexp` | Testa se é um nome de usuário de redes sociais válido |
 | `barCode__regexp` | Testa se é um código de barras válido |
-| `qrCode__regexp` | Testa se é um código QR válido |
 | `qrCode__regexp` | Testa se é um código QR válido |
 | `domainEmail__regexp` | Testa se é um dominio de email válido |
 | `strengthPassword__regexp` | Testa se é uma senha forte válida |
