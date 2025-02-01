@@ -1,2 +1,7 @@
+export * from './debounce'
+export * from './debounceSync'
 export * from './delay'
+export * from './getFileSizeByBytes'
+export * from './stringEncryptedCompare'
+export * from './stringEncrypt'
 export * from './switcher'
