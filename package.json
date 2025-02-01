@@ -1,6 +1,6 @@
 {
   "name": "@voolture-tech/js-utils",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A collection of useful JavaScript and Typescript utilities",
   "private": false,
   "license": "MIT",

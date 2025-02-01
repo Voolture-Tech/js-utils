@@ -1,1 +1,1 @@
-export { default as getFileSizeByBytes } from './getFileSizeByBytes'
+export * from './getFileSizeByBytes'

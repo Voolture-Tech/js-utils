@@ -1,6 +1,6 @@
 import crypto from 'node:crypto'
 
-type IPasswordEncryptOptions = {
+type IStringEncryptOptions = {
   salt?: string
   iterations?: number
   keylen?: number
@@ -8,14 +8,14 @@ type IPasswordEncryptOptions = {
 }
 
 /**
- * Encrypts a password using PBKDF2
- * @param password - The password to encrypt
+ * Encrypts a string using PBKDF2 of node:crypto
+ * @param value - The string to encrypt
  * @param options - The options to use
- * @returns The encrypted password
+ * @returns The encrypted string
  */
-async function passwordEncrypt(
-  password: string,
-  options: IPasswordEncryptOptions,
+export async function stringEncrypt(
+  value: string,
+  options: IStringEncryptOptions,
 ): Promise<string> {
   const salt = options?.salt || crypto.randomBytes(16).toString('hex')
   const iterations = options?.iterations || 10000
@@ -24,7 +24,7 @@ async function passwordEncrypt(
 
   return new Promise((resolve, reject) => {
     crypto.pbkdf2(
-      password,
+      value,
       salt,
       iterations,
       keylen,
@@ -38,5 +38,3 @@ async function passwordEncrypt(
     )
   })
 }
-
-export default passwordEncrypt

@@ -1,4 +1,4 @@
-export default function getFileSizeByBytes(bytes: number): string {
+export function getFileSizeByBytes(bytes: number): string {
   const units = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
   let index = 0
   let size = bytes
